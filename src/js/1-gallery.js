@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const images = [
     {
       preview:
@@ -66,7 +69,6 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", createMarkup(images));
-// gallery.addEventListener("click", handleClick);
 
   function createMarkup(arr) {
     return arr.map(image =>
@@ -82,28 +84,10 @@ gallery.insertAdjacentHTML("beforeend", createMarkup(images));
     `).join("");
 }
 
-// import SimpleLightbox from "simplelightbox";
-// import "simplelightbox/dist/simple-lightbox.min.css";
-// let lightbox = new SimpleLightbox('.gallery li a', {
-//   captionsData: "alt",
-//   captionDelay: 250,
-//   captionClass: "text-center"
-// })
-
-// function handleClick(event) {
-//   event.preventDefault();
-//   if (event.target === event.currentTarget) {
-//     return;
-//   }
-
-//   const selectImgSrc = event.target.dataset.source;
-//   const selectImgAlt = event.target.alt;
-//   const instance = basicLightbox.create(`
-// 	<div class="modal">
-//     <img src="${selectImgSrc}" alt="${selectImgAlt}" />
-//   </div>
-// `)
-//   instance.show();
-// }
+const lightbox = new SimpleLightbox('.gallery a', {
+  navText: ['<', '>'],
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 
