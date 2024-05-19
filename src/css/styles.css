@@ -6,7 +6,6 @@
 */
 @import url('./reset.css');
 @import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Montserrat, sans-serif;
@@ -22,6 +21,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.nav-list {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.nav-link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #747bff;
 }
 
 .gallery {
@@ -49,12 +67,68 @@
   padding: 24px;
 }
 
-input {
+.feedback-form input {
+  padding: 8px 16px;
   width: 360px;
-  margin-bottom: 8px;
+  margin: 8px 0;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
 }
 
-textarea {
-  width: 360px;
+.feedback-form input:hover,
+.feedback-form input:focus {
+  border: 1px solid #000000;
 }
 
+.feedback-form input:active {
+  border: 1px solid #808080;
+}
+
+.feedback-form textarea {
+  padding: 8px 16px;
+  width: 360px;
+  height: 80px;
+  margin: 8px 0 16px 0;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
+  border: 1px solid #000000;
+}
+
+.feedback-form textarea:active {
+  border: 1px solid #808080;
+}
+
+.feedback-form button {
+  background-color: #4E75FF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 8px;
+  width: 95px;
+  height: 40px;
+  border: none;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background-color: #6C8CFF;
+}
